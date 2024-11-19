@@ -1,0 +1,76 @@
+\begin{challenge}
+    \chatitle{Associative Containers with \texttt{std::map} in C++}
+    \begin{chadescription}
+    In C++, the \texttt{std::map} class is an associative container that stores elements as key-value pairs, enabling efficient retrieval and organization of data. 
+    Each key in a \texttt{std::map} is unique, and the container automatically sorts the elements based on their keys using a comparison function, such as \texttt{std::less} by default.
+
+    The \texttt{std::map} container is particularly useful for scenarios where you need fast access to data based on unique keys, such as dictionaries, databases, or lookup tables. 
+    With member functions like \texttt{insert()}, \texttt{find()}, and \texttt{erase()}, it simplifies operations that would otherwise require extensive manual effort in traditional data structures. 
+
+    In this challenge, you will explore how to use \texttt{std::map} to organize and retrieve data efficiently. 
+    You will also compare its functionality to that of arrays or custom key-value implementations in C, understanding the advantages it offers in terms of simplicity and performance.
+    \end{chadescription}
+
+    \begin{task}
+        Write a program using \texttt{std::map} that performs the following steps:
+        \begin{enumerate}
+            \item Declare an \texttt{std::map} to store student names (strings) as keys and their grades (integers) as values.
+            \item Add three entries to the map using \texttt{insert()}.
+            \item Retrieve and print the grade of a specific student using \texttt{find()}.
+            \item Print all the entries in the map using a range-based \texttt{for} loop.
+        \end{enumerate}
+
+        Save your program and run it to ensure the output matches your expectations.
+
+        \begin{questions}
+            \item What happens if you try to insert an entry with a key that already exists in the map?
+            \item How does \texttt{find()} simplify searching for a key compared to a custom key-value implementation in C?
+            \item Why is the automatic sorting of keys useful when iterating over a map?
+        \end{questions}
+    \end{task}
+
+    \begin{task}
+        Write a program using \texttt{std::map} that simulates a product price catalog:
+        \begin{enumerate}
+            \item Declare an \texttt{std::map} to store product names (strings) as keys and their prices (doubles) as values.
+            \item Add five products to the map using the subscript operator (\texttt{[]}) to insert key-value pairs.
+            \item Update the price of one product using the subscript operator.
+            \item Remove a product from the catalog using \texttt{erase()}.
+            \item Print the entire catalog after each operation.
+        \end{enumerate}
+
+        Save your program, compile it, and ensure it runs correctly.
+
+        \begin{questions}
+            \item What are the advantages of using the subscript operator (\texttt{[]}) for insertion and modification in \texttt{std::map}?
+            \item How does \texttt{erase()} ensure that only the specified key-value pair is removed from the map?
+            \item What would happen if you access a key in the map that doesn’t exist using the subscript operator?
+        \end{questions}
+    \end{task}
+
+    \begin{task}
+        Write a program using \texttt{std::map} to count the frequency of words in a sentence:
+        \begin{enumerate}
+            \item Read a sentence from the user and split it into words (assume words are separated by spaces).
+            \item Use an \texttt{std::map} to store each word as a key and its frequency as the value.
+            \item Increment the frequency count for each word as it appears in the sentence.
+            \item Print the word frequency table, showing each word and its count.
+        \end{enumerate}
+
+        Save your program, compile it, and ensure it runs correctly. This task requires careful use of the subscript operator to manage the frequency counts.
+
+        \begin{questions}
+            \item Why is \texttt{std::map} a good choice for counting word frequencies compared to an array or a custom implementation?
+            \item How does \texttt{std::map}'s automatic key management help simplify the process of updating word counts?
+            \item What would happen if the same sentence contained uppercase and lowercase versions of a word? How could you address this issue?
+        \end{questions}
+    \end{task}
+
+    \begin{advise}
+        Working with \texttt{std::map} helps you understand how associative containers simplify the management of key-value pairs in C++. 
+        Unlike manual implementations in C, \texttt{std::map} provides built-in methods for insertion, retrieval, and deletion, making your code more efficient and easier to maintain. 
+        Through this challenge, you have explored scenarios where \texttt{std::map} shines, such as cataloging, searching, and counting. 
+        Always remember that \texttt{std::map} automatically sorts keys and ensures uniqueness, which is invaluable for many applications. 
+        With practice, you'll find \texttt{std::map} to be an essential tool for organizing and accessing data efficiently.
+    \end{advise}
+\end{challenge}
