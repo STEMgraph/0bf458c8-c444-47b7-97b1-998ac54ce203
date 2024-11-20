@@ -1,1 +1,0 @@
-At the end of this challenge, the scholar will be able to explain the concept of \texttt{std::map} as an associative container in C++, including its advantages for key-value pair storage, automatic key sorting, and its use cases for efficient data retrieval and organization.
